@@ -34,7 +34,7 @@ project-root/
 
 ```bash
 git clone https://github.com/TG-Codes/e-gov-ai_wrapper.git
-cd ai-faq-assistant-demo
+cd e-gov-ai_wrapper
 ```
 
 ### 2️⃣ Install Node.js Dependencies
