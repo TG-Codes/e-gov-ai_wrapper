@@ -131,12 +131,5 @@ http://localhost:3000
 
 ---
 
-## 📝 Notes
-
-- Keep your API key secret; don’t commit it publicly.
-- For production: add error handling, use `.env` for sensitive keys, and deploy securely.
-- Remove unnecessary system files like `.DS_Store` before deploying to GitHub.
-
----
 
 Let’s build responsible AI for public service! 🌟
