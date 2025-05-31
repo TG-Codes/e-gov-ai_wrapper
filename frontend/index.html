@@ -21,7 +21,7 @@
             box-shadow: 0 8px 16px rgba(0,0,0,0.2);
             padding: 30px;
             max-width: 500px;
-            width: 100%;
+            width: 90%;
             text-align: center;
         }
 
@@ -30,10 +30,13 @@
             color: #333;
         }
 
+        .form-group {
+            margin-bottom: 20px;
+        }
+
         input {
             width: 80%;
             padding: 12px;
-            margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 8px;
             font-size: 16px;
@@ -53,6 +56,7 @@
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
+            margin-top: 10px;
             transition: background-color 0.3s;
         }
 
@@ -61,7 +65,7 @@
         }
 
         #answer {
-            margin-top: 20px;
+            margin-top: 30px;
             background: #f9f9f9;
             padding: 15px;
             border-radius: 8px;
@@ -69,14 +73,19 @@
             white-space: pre-wrap;
             word-wrap: break-word;
             text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Public Service FAQ Assistant</h1>
-        <input type="text" id="question" placeholder="Ask a question..." />
-        <button onclick="askQuestion()">Ask</button>
+        <div class="form-group">
+            <input type="text" id="question" placeholder="Ask a question..." />
+            <br>
+            <button onclick="askQuestion()">Ask</button>
+        </div>
         <div id="answer"></div>
     </div>
 
@@ -94,7 +103,13 @@
                 body: JSON.stringify({question})
             });
             const data = await response.json();
-            document.getElementById('answer').innerText = data.answer;
+
+            // Format asterisks into bold
+            let formattedAnswer = data.answer
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  // double asterisks
+                .replace(/\*(.*?)\*/g, '<strong>$1</strong>');    // single asterisks
+
+            document.getElementById('answer').innerHTML = formattedAnswer;
         }
     </script>
 </body>
