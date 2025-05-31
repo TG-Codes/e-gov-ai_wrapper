@@ -1,22 +1,42 @@
 # AI FAQ Assistant
 
-This is a simple demo project that integrates a Gemini API with a Node.js backend and a basic frontend.
+This is a simple demo project that integrates the Gemini API (via Google) with a Node.js backend and a basic frontend.
 
 ## Setup
 
-1. Install Node.js and Python.
-2. Run:
+1. **Install dependencies:**
+   ```bash
    npm install express
-3. Replace `YOUR_API_KEY` in `backend/ai_service.py` with your Gemini API key.
-4. Start the server:
+   ```
+
+2. **Generate your Gemini API key:**
+   - Visit [Google AI Studio (Gemini API)](https://makersuite.google.com/app/apikey) to create your API key.
+   - Replace `'YOUR_API_KEY'` in `backend/ai_service.py` with your actual key.
+
+3. **Start the server:**
+   ```bash
    node backend/server.js
-5. Visit http://localhost:3000
+   ```
+
+4. **Access the frontend:**
+   - Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Usage
 
-- Ask any government service-related question in the input field.
-- The system calls Gemini API and displays the answer.
+- Enter any government service-related question in the input field.
+- The system uses the Gemini API to provide an accurate, helpful answer.
+
+## Resources
+
+- **Gemini API Key Generation:** [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
+- **Gemini API Docs:** [https://cloud.google.com/vertex-ai/generative-ai/docs/overview](https://cloud.google.com/vertex-ai/generative-ai/docs/overview)
 
 ## Note
 
-This is a demo. For production, add error handling, secure the API key, and deploy properly.
+This is a demo. For production:
+- Add error handling.
+- Secure the API key.
+- Use environment variables for sensitive data.
+- Deploy using a secure hosting platform.
+
+Let’s build responsible AI for public service! 🌟
