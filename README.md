@@ -26,6 +26,22 @@ This is a simple demo project that integrates the Gemini API (via Google) with a
 - Enter any government service-related question in the input field.
 - The system uses the Gemini API to provide an accurate, helpful answer.
 
+## Running the Python Script Directly
+
+You can also test the AI service manually:
+
+1. Install the required package:
+   ```bash
+   pip install google-generativeai
+   ```
+
+2. Run the script:
+   ```bash
+   python3 backend/ai_service.py "How do I renew my driver's license in Nigeria?"
+   ```
+
+3. The script will print the answer in the terminal.
+
 ## Resources
 
 - **Gemini API Key Generation:** [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
