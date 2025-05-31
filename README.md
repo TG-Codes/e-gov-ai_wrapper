@@ -33,7 +33,7 @@ project-root/
 ### 1️⃣ Clone the Project
 
 ```bash
-git clone https://github.com/yourusername/ai-faq-assistant-demo.git
+git clone https://github.com/TG-Codes/e-gov-ai_wrapper.git
 cd ai-faq-assistant-demo
 ```
 
