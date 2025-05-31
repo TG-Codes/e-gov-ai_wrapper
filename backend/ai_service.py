@@ -3,7 +3,7 @@ import google.generativeai as genai
 
 api_key = 'AIzaSyCASu0OrwpkroHYUslJuo_ZHAiQ_NHfZMs'
 genai.configure(api_key=api_key)
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-2.0-flash')
 
 question = sys.argv[1]
 
