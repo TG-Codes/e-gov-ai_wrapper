@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { color: #333; }
+input { width: 300px; padding: 10px; }
+button { padding: 10px; }
+#answer { margin-top: 20px; font-weight: bold; }
